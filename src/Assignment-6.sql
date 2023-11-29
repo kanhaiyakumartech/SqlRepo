@@ -30,9 +30,8 @@ SELECT
     LAG(quantity_sold) OVER (ORDER BY sale_date) AS previous_quantity,
     LEAD(quantity_sold) OVER (ORDER BY sale_date) AS next_quantity
 FROM sales_data;
-------- Step 4: Return the first and last values in an ordered set
 
--- Step 4: Return the first and last values in an ordered set
+--  4: Return the first and last values in an ordered set
 SELECT
     product_id,
     FIRST_VALUE(sale_date) OVER (PARTITION BY product_id ORDER BY sale_date) AS first_sale_date,
