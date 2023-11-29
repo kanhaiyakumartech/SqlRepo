@@ -1,4 +1,4 @@
--- Step 1: Create table and insert data
+--  1: Create table and insert data
 CREATE TABLE product_details (
     sell_date DATE,
     product VARCHAR(50)
@@ -17,7 +17,7 @@ INSERT INTO product_details  VALUES
 select *
 from product_details;
 
--- Step 2: Write a query to find the number of different products sold for each date
+-- 2: Write a query to find the number of different products sold for each date
 SELECT sell_date,COUNT(DISTINCT product) AS num_sold,STRING_AGG(product, ', ') AS product_list
 FROM product_details
 GROUP BY sell_date;
