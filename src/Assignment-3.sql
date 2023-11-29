@@ -1,4 +1,4 @@
---  1: Create table and insert data
+---  1: Create table and insert data
 CREATE TABLE product_details (
     sell_date DATE,
     product VARCHAR(50)
