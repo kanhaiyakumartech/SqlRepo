@@ -4,6 +4,7 @@ CREATE TABLE sales_data (
     sale_date DATE,
     quantity_sold INT
 );
+
 ---2.Now we have to insert the given data --
 INSERT INTO sales_data  VALUES
 (1, '2022-01-01', 20),
@@ -14,14 +15,17 @@ INSERT INTO sales_data  VALUES
 (2, '2022-01-03', 18),
 (1, '2022-01-04', 12),
 (2, '2022-01-04', 22);
+
 ----here i verify our data is insert or not in table --
 select *
 from sales_data;
+
 ---3. assign rank by partition based on product_id and in each product id find the lowest sold quantity---
 SELECT product_id,sale_date,quantity_sold,
     RANK() OVER (PARTITION BY product_id ORDER BY quantity_sold) AS rank_within_product,
     MIN(quantity_sold) OVER (PARTITION BY product_id) AS lowest_sold_quantity
 FROM sales_data;
+
 -----  3: Retrieve value from a previous row and the next row
 SELECT
     product_id,
@@ -31,7 +35,7 @@ SELECT
     LEAD(quantity_sold) OVER (ORDER BY sale_date) AS next_quantity
 FROM sales_data;
 
---  4: Return the first and last values in an ordered set
+--- 4: Return the first and last values in an ordered set
 SELECT
     product_id,
     FIRST_VALUE(sale_date) OVER (PARTITION BY product_id ORDER BY sale_date) AS first_sale_date,
