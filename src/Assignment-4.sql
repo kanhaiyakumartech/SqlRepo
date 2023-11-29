@@ -1,4 +1,4 @@
--- Step 1: Create table and insert data
+--  1: Create table and insert data
 CREATE TABLE dept_tbl (
     id_deptname VARCHAR(50),
     emp_name VARCHAR(50),
@@ -15,7 +15,7 @@ INSERT INTO dept_tbl (id_deptname, emp_name, salary) VALUES
 ('3333-CHEM', 'SONIKA', 12000),
 ('4444-BIO', 'HITESH', 2300),
 ('44-BIO', 'AKSHAY', 10000);
--- Step 1: Create table and insert data
+--  1: Create table and insert data
 CREATE TABLE dept_tbl (
     id_deptname VARCHAR(50),
     emp_name VARCHAR(50),
