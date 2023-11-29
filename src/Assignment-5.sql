@@ -1,4 +1,4 @@
---First I am Creating a table and insert data
+----First I am Creating a table and insert data
 CREATE TABLE email_signup (
     id INT,
     email_id VARCHAR(50),
