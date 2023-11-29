@@ -15,6 +15,7 @@ INSERT INTO dept_tbl (id_deptname, emp_name, salary) VALUES
 ('3333-CHEM', 'SONIKA', 12000),
 ('4444-BIO', 'HITESH', 2300),
 ('44-BIO', 'AKSHAY', 10000);
+
 --  1: Create table and insert data
 CREATE TABLE dept_tbl (
     id_deptname VARCHAR(50),
@@ -34,7 +35,6 @@ INSERT INTO dept_tbl (id_deptname, emp_name, salary) VALUES
 ('44-BIO', 'AKSHAY', 10000);
 
 --Here i am using  group function--
-
 select *
 from dept_tbl;
 select id_deptname, sum(salary) as Total_salary
